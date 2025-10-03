@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трекер аллергии</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">АллергоТрекер</div>
+        <div class="account-icon" id="accountIcon"></div>
+        <div class="account-menu hidden" id="accountMenu">
+            <div id="userEmail"></div>
+            <button id="logoutBtn">Выйти</button>
+            <div class="allergens-list" id="allergensList"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="allergy-selector">
+            <select id="allergyType">
+                <option value="pollen">Пыльца</option>
+                <option value="dust">Пыль</option>
+                <option value="food">Еда</option>
+            </select>
+        </section>
+
+        <section class="chart-container">
+            <div class="chart-header">
+                <h3>Уровень аллергенов</h3>
+                <div class="danger-levels">
+                    <span class="level-0">0</span>
+                    <span class="level-1">1</span>
+                    <span class="level-2">2</span>
+                    <span class="level-3">3</span>
+                </div>
+            </div>
+            <canvas id="allergyChart"></canvas>
+        </section>
+
+        <section class="symptoms">
+            <h3>Симптомы сегодня</h3>
+            <div class="symptoms-grid">
+                <button class="symptom-btn" data-symptom="runny-nose">Насморк</button>
+                <button class="symptom-btn" data-symptom="cough">Кашель</button>
+                <button class="symptom-btn" data-symptom="eyes">Глаза</button>
+            </div>
+            <button id="saveSymptoms">Сохранить</button>
+        </section>
+
+        <section class="auth-section hidden" id="authSection">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Пароль">
+            <button id="loginBtn">Войти</button>
+            <button id="registerBtn">Регистрация</button>
+            <button id="tgAuthBtn">Войти через Telegram</button>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="social-link">Telegram</a>
+        <a href="#" class="social-link">VK</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

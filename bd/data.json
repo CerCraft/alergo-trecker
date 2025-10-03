@@ -1,0 +1,1 @@
+json { "users": [], "allergens": { "pollen": { "levels": [0, 1, 2, 1, 3, 2, ...] } } }
